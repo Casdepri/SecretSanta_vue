@@ -4,7 +4,8 @@
         <div class="card-container">
             <div class="card-items">
                 <card-item v-for="participant in participants" :key="participant.name" :participant="participant"
-                    :hash="hash" :santa="$route.params.name" :dontSanta="getNoSantaName" :hashName="setHash(participant.name)">
+                    :hash="hash" :santa="$route.params.name" :dontSanta="getNoSantaName"
+                    :hashName="setHash(participant.name)">
                 </card-item>
             </div>
         </div>
@@ -16,6 +17,7 @@
     import CardItem from 'components/CardItem.vue'
     import Hello from 'components/Hello.vue'
     import axios from 'axios'
+    import { animation } from 'src/animation'
 
     export default {
         components: {
@@ -32,6 +34,10 @@
             }
         },
         mounted: function () {
+            window.addEventListener('load', () => {
+                // запуск финкции приветсвия
+                setTimeout(() => {new animation()}, 3000)
+            })
         },
         created: function () {
             axios.get('./src/data.json').then(response => {
@@ -59,11 +65,9 @@
         },
         computed: {
             getNoSantaName() {
-                // console.log(this.setHash(this.$route.params.name))
                 let maxLength = this.hash.length - 1;
                 let i = 0;
                 for (let l = 0; l <= maxLength; l++) {
-                // this.hash.forEach((element, index) => {
                     if (this.setHash(this.$route.params.name) == this.hash[l]) {
                         i = maxLength != l ? l + 1 : 0;
                         console.log("Ты - " + this.$route.params.name + " будешь тайным сантой для - " + this.hash[i])

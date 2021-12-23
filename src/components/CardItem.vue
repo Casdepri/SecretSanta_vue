@@ -1,5 +1,5 @@
 <template>
-    <div class="card-item" @click="openCard();">
+    <div class="card-item" @click="openCard();" :class="{ open: isIt }">
         <div class="card-backside" :class="{ open: setOpenClass }" ref="observer">
             <img type="image/svg+xml" :src="logo" />
         </div>
@@ -37,31 +37,12 @@
         mounted() {
             if (this.participant.name == this.$route.params.name
                 || this.hashName == this.dontSanta)
-                this.opened = true;
-        },
-        created: function () {
+                this.isIt = true;
         },
         methods: {
             openCard() {
                 this.opened = this.opened == false ? true : false;
             },
-            // setHashOnName(name) {
-            //     let result_hash = [],
-            //         arr_name = [];
-
-            //     arr_name = name.toString().toLocaleLowerCase().replace(/\s/g, "").split("");
-            //     for (let i = 0; i <= arr_name.length; i++) {
-            //         for (let j = 0; j <= this.abc.length; j++) {
-            //             if (arr_name[i] == this.abc[j]) {
-            //                 result_hash.push(j);
-            //             }
-            //         }
-            //     }
-
-            //     console.log(result_hash.join(""))
-
-            //     return result_hash.join("");
-            // },
         },
         computed: {
             getData() {
@@ -74,8 +55,13 @@
             },
             setHashValue() {
                 return this.hashArray = this.hash;
-            },
+            }
         },
-
+        // watch: {
+        //     opened: function (newVal, oldVal) {
+        //         console.log(newVal, "new")
+        //         console.log(oldVal, "old")
+        //     }
+        // }
     };
 </script>
