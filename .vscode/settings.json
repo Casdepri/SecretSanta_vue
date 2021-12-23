@@ -1,0 +1,8 @@
+{
+    "jumpToAliasFile.alias": {
+        "@": "d:\\vue\\SecretSanta_vue",
+        "vue": "vue/dist/vue.js",
+        "components": "d:\\vue\\SecretSanta_vue\\src\\components",
+        "src": "d:\\vue\\SecretSanta_vue\\src"
+    }
+}

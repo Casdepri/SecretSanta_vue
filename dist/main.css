@@ -1,0 +1,217 @@
+/*!**********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/style.scss ***!
+  \**********************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;&display=swap);
+/*!**************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/style.scss (1) ***!
+  \**************************************************************************************************************************************************************/
+html {
+  background: -webkit-gradient(linear, left top, right top, from(#ff7595), color-stop(94%, #7facff));
+  background: linear-gradient(90deg, #ff7595 0%, #7facff 94%);
+  color: #ffffff;
+}
+
+.btn-ok {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 8px 3px;
+  background: -webkit-gradient(linear, left top, right top, from(#7facff), color-stop(94%, #ff7595));
+  background: linear-gradient(90deg, #7facff 0%, #ff7595 94%);
+  background-size: 150% 150%;
+  background-position: 100% 100%;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.btn-ok:hover {
+  background-position: 50% 0%;
+}
+.btn-ok span {
+  padding: 5px 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#ff7595), color-stop(94%, #7facff));
+  background: linear-gradient(90deg, #ff7595 0%, #7facff 94%);
+  background-size: 150% 150%;
+  background-position: 100% 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.btn-ok span:hover {
+  background-position: 50% 0%;
+}
+
+.header {
+  position: relative;
+  border-bottom: 1px solid;
+  background-color: rgba(0,0,0,0.12549);
+  margin-bottom: 1.5rem;
+}
+.header__logo {
+  padding: 0.5rem 0;
+}
+.header__logo img {
+  display: block;
+  margin: 0 auto;
+}
+.header__nav .btn-ok {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1rem;
+  font-size: 1.3rem;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.card-backside {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffdd80), to(#cba65a));
+  background: linear-gradient(to bottom, #ffdd80, #cba65a);
+  cursor: pointer;
+  background-size: 150% 150%;
+  background-position: 100% 100%;
+  -webkit-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+  border-radius: 15px;
+}
+.card-backside:hover {
+  background-position: 50% 50%;
+}
+.card-backside img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70%;
+}
+.card-backside.open {
+  -webkit-animation: scaleOff 1s forwards;
+          animation: scaleOff 1s forwards;
+}
+.card-frontside {
+  display: grid;
+  grid-template-areas: "logo logo" "image name" "terms terms";
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.card-frontside.open {
+  -webkit-animation: scaleOn 1s forwards;
+          animation: scaleOn 1s forwards;
+}
+.card-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  width: 976px;
+  margin: 0 auto;
+}
+.card-item {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffdd80), to(#cba65a));
+  background: linear-gradient(to bottom, #ffdd80, #cba65a);
+  height: 295px;
+  border-radius: 15px;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 220px;
+          flex: 0 0 220px;
+  overflow: hidden;
+}
+.card-logo {
+  grid-area: logo;
+  margin-bottom: 1rem;
+}
+.card-logo img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+.card-image {
+  grid-area: image;
+  width: 70px;
+  height: 70px;
+}
+.card-image img {
+  width: 100%;
+}
+.card-name {
+  grid-area: name;
+  font-size: 1.5rem;
+}
+.card-terms {
+  grid-area: terms;
+  margin-top: 2rem;
+}
+
+@-webkit-keyframes scaleOff {
+  30% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes scaleOff {
+  30% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+@-webkit-keyframes scaleOn {
+  90% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scaleOn {
+  90% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
