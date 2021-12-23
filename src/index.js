@@ -4,6 +4,7 @@ import HeaderComponent from 'components/UI/HeaderComponent.vue'
 import CardsPage from 'components/CardsPage.vue'
 import VueRouter from 'vue-router'
 
+
 Vue.use(VueRouter)
 
 const routes = [

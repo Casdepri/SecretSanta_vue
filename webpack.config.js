@@ -10,12 +10,13 @@ const mode = process.env.NODE_ENV == "development" ? "development" : "production
 module.exports = {
     mode: mode,
     entry: {
-        main: path.resolve(__dirname, "./src/index.js"),
-        animation: path.resolve(__dirname, "./src/animation.js"),
+        // main: path.resolve(__dirname, "./src/index.js"),
+        // animation: path.resolve(__dirname, "./src/animation.js"),
+        index: './src/index.js',
     },
     output: {
         path: path.resolve(__dirname, "./dist"),
-        filename: "[name].js",
+        filename: "[name].bundle.js",
     },
     module: {
         rules: [

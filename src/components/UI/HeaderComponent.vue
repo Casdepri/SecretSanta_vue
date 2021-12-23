@@ -1,10 +1,10 @@
 <template>
     <div class="header">
         <div class="header__logo">
-            <img :src="logo" alt="">
+            <img :src="logo" alt="" />
         </div>
-        <div class="header__nav">            
-            <Ui-button @click="this.$router.push('/')">На главную</ui-button>
+        <div class="header__nav">
+            <div class="btn-ok" @click="$router.push('/').catch(err => {})">На главную</div>
         </div>
     </div>
 </template>
@@ -19,6 +19,6 @@
             return {
                 logo
             }
-        }
+        },
     }
 </script>

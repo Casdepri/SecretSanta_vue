@@ -1,6 +1,6 @@
 <template>
     <div class="hello-container">
-        <h1>Привет, {{ this.$route.params.name }}!</h1>
+        <h1>Привет, <slot></slot>!</h1>
     </div>
 </template>
 
